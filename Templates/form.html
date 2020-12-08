@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Home Page</title>
+</head>
+<body>
+<h3>Please enter an address to find the ROI:</h3>
+<form method="post" action="/output">
+    <input type="text" name="address" placeholder="Enter Street Address">
+    <br><br>
+    <input type="text" name="zipcode" placeholder="Enter Zip Code">
+    <input type="submit" value="Submit" name="ok"/>
+</form>
+<h3>Look up a random house:</h3>
+<form method = "post" action = "/random_output">
+<input type="submit" value="Random Address" name="ok"/>
+</form>
+</body>
+</html>
