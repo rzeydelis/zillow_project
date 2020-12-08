@@ -19,11 +19,6 @@ app = Flask(__name__)
 def home():
     return render_template('home.html')
 
-# front page - dedication to kriti for being supporting
-@app.route('/kriti')
-def kriti():
-    return render_template('kriti.html')
-
 # fill out the address and zip code to return information
 @app.route('/form')
 def index():
