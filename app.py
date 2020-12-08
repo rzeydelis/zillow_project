@@ -31,7 +31,7 @@ def success():
         #return render_template('success.html', email=email)
         address = request.form['address']
         zipcode = request.form['zipcode']
-        zestimate, rent_zestimate, home_size, num_of_bedrooms, num_of_bathrooms, property_size, year_built = delete.zillow_info(address, zipcode)
+        zestimate, rent_zestimate, home_size, num_of_bedrooms, num_of_bathrooms, property_size, year_built = zillow_address_pull.zillow_info(address, zipcode)
         
         
         return render_template('success.html',
@@ -48,7 +48,7 @@ def success():
 @app.route('/random_output', methods=['POST'])
 def random_output():
     if request.method == 'POST':
-        rent_zestimate, full_address, home_size, last_sold_price, last_sold_date = delete.random_address()
+        rent_zestimate, full_address, home_size, last_sold_price, last_sold_date = zillow_address_pull.random_address()
         
         return render_template('random_success.html',
                                rent_zestimate = rent_zestimate,
