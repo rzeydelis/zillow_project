@@ -47,7 +47,7 @@ def zillow_info(address, zipcode):
     #        continue
 
     # connect to Zillow API
-    zillow_data = ZillowWrapper('X1-ZWz17hux7ivthn_9myga')
+    zillow_data = ZillowWrapper('Enter Your API Key')
     deep_search_response = zillow_data.get_deep_search_results(i, x)
     result = GetDeepSearchResults(deep_search_response)
 
